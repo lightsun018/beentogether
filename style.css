@@ -1,0 +1,100 @@
+#header{
+    text-align: center;
+    font-size: 38px;
+    color: palevioletred;
+}
+
+.counter{
+    background-color: palevioletred;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#person1{
+    height: 150px;
+    width: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 50px;
+}
+
+.heart {
+  fill: white;
+  position: relative;
+  width: 100px;
+  height: 90px;
+  margin-top: 80px;
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+#person2{
+    height: 150px;
+    width: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 50px;
+}
+
+.info1, .info2{
+  display: flex;
+  flex-direction: column;
+}
+
+.info1 h2,p{
+  text-align: center;
+  bottom: 40px;
+  position: relative;
+  color: #fff;
+}
+
+.info1 p {
+  bottom: 70px;
+}
+
+.info2 p {
+  bottom: 70px;
+}
+
+.info2 h2,p{
+  text-align: center;
+  bottom: 40px;
+  position: relative;
+  color: #fff;
+}
+
+.countup {
+  text-align: center;
+  color: #fff;
+}
+
+.midinfo{
+  display: flex;
+  flex-direction: column;
+}
+
+.midinfo span{
+  font-size: 18px;
+  right:5px;
+  position: relative;
+  top: 30px;
+}
+
+.midinfo h3{
+  text-align: center;
+  position: relative;
+  color: #fff;
+  top: 30px;
+}
+
+
+
+
