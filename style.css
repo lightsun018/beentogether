@@ -95,6 +95,33 @@
   top: 30px;
 }
 
+@media only screen and (max-width: 768px) {
+  #person1, #person2{
+    height: 100px;
+    width: 100px;
+  }
+
+  .heart {
+    width: 80px;
+    height: 70px;
+  }
+
+  .info1 h2{
+    font-size: 20px;
+  }
+  
+  .info2 h2{
+    font-size: 20px;
+  }
+
+  .info1, .info2 p{
+    font-size: 15px;
+  }
+
+  .midinfo span{
+    font-size: 18px;
+  }
+}
 
 
 
