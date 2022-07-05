@@ -112,6 +112,7 @@ color: #fff;
 .heart {
   width: 80px;
   height: 70px;
+  left: 20%;
 }
 
 .info1 h2{
@@ -131,7 +132,7 @@ color: #fff;
 }
 
 #timer {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 #timer div {
@@ -140,6 +141,7 @@ color: #fff;
 
 #timer div span {
   margin: 2px;
+  font-size: 15px;
 }
 }
 
