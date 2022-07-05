@@ -1,3 +1,7 @@
+h3{
+  color: #fff;
+}
+
 #header{
   text-align: center;
   font-size: 38px;
@@ -27,6 +31,7 @@ width: 100px;
 height: 90px;
 margin-top: 80px;
 animation: pulse 2s ease infinite;
+left: 30%;
 }
 
 @keyframes pulse {
@@ -69,28 +74,28 @@ position: relative;
 color: #fff;
 }
 
-.countup {
-text-align: center;
-color: #fff;
+#timer {
+  font-size: 23px;
+  font-weight: 100;
+  text-align: center;
+  color: #fff; 
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 20px;
 }
 
-.midinfo{
-display: flex;
-flex-direction: column;
+#timer div {
+  display: inline-block;
+  margin: 5px;
+  position: relative;
+  text-align: center;
 }
 
-.midinfo span{
-font-size: 18px;
-right:5px;
-position: relative;
-top: 30px;
-}
-
-.midinfo h3{
-text-align: center;
-position: relative;
-color: #fff;
-top: 30px;
+#timer div span {
+  display: inline-block;
+  margin: 10px;
+  position: relative;
 }
 
 @media only screen and (max-width: 768px) {
@@ -124,4 +129,20 @@ top: 30px;
 .midinfo span{
   font-size: 18px;
 }
+
+#timer {
+  font-size: 18px;
+}
+
+#timer div {
+  margin: 2px;
+}
+
+#timer div span {
+  margin: 2px;
+}
+}
+
+section {
+  padding: 100px 0;
 }
