@@ -1,30 +1,82 @@
-window.onload = function() {
-    // Month Day, Year Hour:Minute:Second, id-of-element-container
-    countUpFromTime("Jun 4, 2022", 'countup1'); // ****** Change this line!
-  };
-  function countUpFromTime(countFrom, id) {
-    countFrom = new Date(countFrom).getTime();
-    var now = new Date(),
-        countFrom = new Date(countFrom),
-        timeDifference = (now - countFrom);
-      
-    var secondsInADay = 60 * 60 * 1000 * 24,
-        secondsInAHour = 60 * 60 * 1000;
-      
-    days = Math.floor(timeDifference / (secondsInADay) * 1);
-    years = Math.floor(days / 365);
-    if (years > 1){ days = days - (years * 365) }
-    hours = Math.floor((timeDifference % (secondsInADay)) / (secondsInAHour) * 1);
-    mins = Math.floor(((timeDifference % (secondsInADay)) % (secondsInAHour)) / (60 * 1000) * 1);
-    secs = Math.floor((((timeDifference % (secondsInADay)) % (secondsInAHour)) % (60 * 1000)) / 1000 * 1);
+function updateTimer() {
+	// yyyy-MM-dd HH:mm:ss
+  past  = Date.parse("2022-06-04 00:00:00");
+  now     = new Date();
+  diff    = now - past;
+
+  years  = Math.floor( diff / (1000*60*60*24*30*12) );
+  months = Math.floor( diff / (1000*60*60*24*30) );
+  days   = Math.floor( diff / (1000*60*60*24) );
+  hours  = Math.floor( diff / (1000*60*60) );
+  mins   = Math.floor( diff / (1000*60) );
+  secs   = Math.floor( diff / 1000 );
+
+  y = years;
+  M = months - years  * 12;
+  d = days   - months * 30;
+  h = hours  - days   * 24;
+  m = mins   - hours  * 60;
+  s = secs   - mins   * 60;
+  document.getElementById("timer")
+    .innerHTML =
+      '<div>' + y + '<span>years</span></div>' +
+      '<div>' + M + '<span>months</span></div>' +
+      '<div>' + d + '<span>days</span></div>' 
+}
+setInterval('updateTimer()', 1000 );
+
+
+  $(function(){
+
+    window.sr = ScrollReveal();
   
-    var idEl = document.getElementById(id);
-    idEl.getElementsByClassName('years')[0].innerHTML = years;
-    idEl.getElementsByClassName('days')[0].innerHTML = days;
-    idEl.getElementsByClassName('hours')[0].innerHTML = hours;
-    idEl.getElementsByClassName('minutes')[0].innerHTML = mins;
-    idEl.getElementsByClassName('seconds')[0].innerHTML = secs;
+    if ($(window).width() < 768) {
   
-    clearTimeout(countUpFromTime.interval);
-    countUpFromTime.interval = setTimeout(function(){ countUpFromTime(countFrom, id); }, 1000);
-  }
+      if ($('.timeline-content').hasClass('js--fadeInLeft')) {
+        $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
+      }
+  
+      sr.reveal('.js--fadeInRight', {
+        origin: 'right',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
+      });
+  
+    } else {
+      
+      sr.reveal('.js--fadeInLeft', {
+        origin: 'left',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
+      });
+  
+      sr.reveal('.js--fadeInRight', {
+        origin: 'right',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
+      });
+  
+    }
+    
+    sr.reveal('.js--fadeInLeft', {
+        origin: 'left',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
+      });
+  
+      sr.reveal('.js--fadeInRight', {
+        origin: 'right',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
+      });
+  
+  
+  });
+  
+
+
