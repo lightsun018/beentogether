@@ -1,38 +1,44 @@
 <!DOCTYPE html>
-<html>
-<Head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Journal</title>
-    <link rel="stylesheet" href="style.css">
-</Head>
-<body>
-    <div id="header">
-        <h1>VR-Journey</h1>
-    </div>
-     <div class="counter">
-        <div class="info1">
-            <div id="person1">
-                <img src="bear.jpg" alt="bear" width="150" height="150">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <section class="home">
+        <div id="header">
+            <h1>VR-Journal</h1>
+        </div>
+        <div class="countup">
+            <div class="counter">
+                <div class="info1">
+                    <div id="person1">
+                        <img src="bear.jpg" alt="bear" width="150" height="150">
+                    </div>
+                    <h2>Mr.Bear</h2>
+                    <p>11/12/05</p>
+                </div>
+                <div class="midinfo">
+                    <svg class="heart" viewBox="0 0 32 29.6">
+                        <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                        c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+                    </svg> 
+                </div>
+                <div class="info2">
+                    <div id="person2">
+                        <img src="bbear.jpg" alt="bbear" width="150" height="150">
+                    </div>
+                    <h2>Mrs.Bear</h2>
+                    <p>01/05/05</p>
+                </div>
             </div>
-            <h2>Mr.Bear</h2>
-            <p>11/12/05</p>
-        </div>
-        <div class="midinfo">
-            <svg class="heart" viewBox="0 0 32 29.6">
-                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
-                c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
-              </svg> 
-            <div id="timer"></div>
-        </div>
-        <div class="info2">
-            <div id="person2">
-                <img src="bbear.jpg" alt="bbear" width="150" height="150">
+            <div class="been">
+                <h1>Been Together</h1>
+                <div id="timer"></div>
             </div>
-            <h2>Mrs.Bear</h2>
-            <p>01/05/05</p>
         </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+        </section>
+    </body>
 </html>
