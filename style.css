@@ -3,8 +3,6 @@
   }
 
 .counter{
-    background-color: palevioletred;
-    width: 100%;
     border-radius: 10px;
     display: flex;
     position: relative;
